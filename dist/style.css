@@ -5,3 +5,20 @@ dialog{border:0;position:fixed;inset:0;margin:0;width:100%;height:100%;max-width
 @media(max-width:800px){.hero{min-height:0}.hero-photo img{height:470px}.hero h2{font-size:6rem}.section{padding-top:70px;padding-bottom:70px}.beginning,.music,.letter-section{grid-template-columns:1fr;gap:40px}.section-head{align-items:start;flex-direction:column;gap:22px}.memory-grid{grid-template-columns:repeat(2,1fr)}.memory-photo:nth-child(3n+2){margin-top:0}.memory-photo:nth-child(even){margin-top:30px}.world-grid{grid-template-columns:1fr}.letter-photo{max-width:500px;margin:auto}.nav-links{gap:15px}.music{gap:30px}}
 @media(max-width:550px){.entrance{padding:20px}.entrance-layout{gap:20px;grid-template-columns:1fr 1fr;align-items:center;padding:30px 0}.entrance h1{font-size:clamp(2.6rem,11vw,4rem)}.entrance .eyebrow{font-size:.7rem;margin-bottom:15px}.entrance .intro{font-size:.875rem;margin:18px 0}.entrance-photo{height:350px}.season-stamp{right:-4px;padding:12px 16px}.season-stamp strong{font-size:3rem}.entrance .button{padding:14px;gap:10px;font-size:.875rem}.from{font-size:.75rem}.entrance-top,.entrance-bottom{font-size:.65rem;letter-spacing:.06em}.nav-links{display:none}nav{padding:16px 22px}.hero{grid-template-columns:1fr;padding:30px 22px 50px;gap:35px}.hero h2{font-size:6.5rem}.hero-copy>p:not(.eyebrow){font-size:1rem}.hero-photo{width:85%;justify-self:center}.hero-photo img{height:440px}.hero-photo figcaption{left:-18px;right:-10px}.vertical-label{display:none}.ribbon{line-height:1.8;font-size:.75rem;padding:12px}.eyebrow{font-size:.75rem}.birth-details dl{gap:12px}.birth-details dd{font-size:2.3rem}.birth-details dt{font-size:.7rem}.birth-details small{font-size:.8rem}.memory-grid{gap:22px 14px}.memory-photo img{height:235px}.memory-photo span{font-size:.75rem;align-items:start;gap:5px}.memory-photo .index{font-size:.65rem}.court-card{min-height:470px}.court-card>div{left:22px;right:22px;bottom:25px}.nature-card{padding:26px}.nature-footer{font-size:.65rem}.letter-photo{transform:rotate(-2deg)}footer{flex-direction:column;text-align:center;gap:12px}.finale{padding-top:40px}.finale .eyebrow{max-width:270px}.finale h2{font-size:3.5rem}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+/* Season 13: athletic display type with a personal handwritten sign-off. */
+h1,h2,h3{font-family:'Racing Sans One','Barlow Condensed',Impact,sans-serif;font-weight:400;line-height:1.04;letter-spacing:-.035em;text-wrap:balance}
+.entrance-copy,.hero-copy,.section-head>div,.beginning>div,.music>div,.letter{min-width:0}
+.entrance h1{font-size:clamp(3.4rem,6.8vw,6.5rem);line-height:1.02}
+.entrance h1 em{display:inline-block;text-shadow:3px 3px 0 #082820}
+.hero h2{font-size:clamp(4.4rem,8.5vw,8.5rem);line-height:.98}
+.hero .outline{font-size:.48em;letter-spacing:.02em;line-height:1.2}
+h2{font-size:clamp(2.5rem,4.5vw,5rem)}
+h3{font-size:clamp(2rem,3vw,3.2rem)}
+.beginning h2{font-size:clamp(2.3rem,3.5vw,3.8rem)}
+.letter h2{font-size:clamp(2.8rem,4vw,4.2rem)}
+.wish-section h2{font-size:clamp(2.8rem,5.6vw,6rem)}
+.finale h2{font-size:clamp(2.6rem,5vw,5rem)}
+.season-stamp strong,.hero-photo figcaption strong,.big13{font-family:'Racing Sans One','Barlow Condensed',sans-serif;font-weight:400;letter-spacing:-.06em}
+.monogram{font-family:'Racing Sans One',sans-serif}
+.signature strong{font-family:'Caveat',cursive;font-weight:700;font-size:2.7rem;line-height:1.2}
+@media(max-width:550px){.entrance h1{font-size:clamp(1.9rem,7.1vw,2.7rem);letter-spacing:-.045em}.hero h2{font-size:clamp(4rem,17vw,6rem)}.hero .outline{font-size:.46em}.finale h2{font-size:clamp(2.2rem,9vw,3.2rem)}}
