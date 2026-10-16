@@ -22,3 +22,9 @@ h3{font-size:clamp(2rem,3vw,3.2rem)}
 .monogram{font-family:'Racing Sans One',sans-serif}
 .signature strong{font-family:'Caveat',cursive;font-weight:700;font-size:2.7rem;line-height:1.2}
 @media(max-width:550px){.entrance h1{font-size:clamp(1.9rem,7.1vw,2.7rem);letter-spacing:-.045em}.hero h2{font-size:clamp(4rem,17vw,6rem)}.hero .outline{font-size:.46em}.finale h2{font-size:clamp(2.2rem,9vw,3.2rem)}}
+.nature-photo-card{padding:0;overflow:hidden;justify-content:start}
+.nature-photo-card>img{width:100%;height:420px;object-fit:contain;background:var(--deep)}
+.nature-copy{padding:32px}
+.nature-copy>p:not(.eyebrow){margin-top:22px}
+.memory-photo img{background:#e7ebd9}
+@media(max-width:550px){.nature-photo-card>img{height:380px}.nature-copy{padding:26px}}

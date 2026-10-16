@@ -9,7 +9,19 @@ const photos=[
  [5,'The best kind of memories','Kobe sharing a smile at a Seahawks event'],
  [10,'Better with a teammate','Kobe and a friend smiling at basketball camp'],
  [7,'Her court. Her game.','Kobe holding a basketball on the court'],
- [8,'That same smile. A new chapter.','Kobe smiling with a basketball on her shoulder']
+ [8,'That same smile. A new chapter.','Kobe smiling with a basketball on her shoulder'],
+ [12,"A little focus. A little adventure.","Kobe practicing archery outdoors"],
+ [13,"Taking aim","Kobe aiming a bow at an outdoor archery target"],
+ [14,"Game-day glow","Kobe posing with two Seahawks dancers on the field"],
+ [15,"Side by side","Kobe sharing a hug in a portrait with a younger girl"],
+ [16,"Sweet moments together","Kobe and friends enjoying sweet treats"],
+ [17,"Lunch and a little laughter","Kobe and a younger girl smiling at a restaurant"],
+ [18,"Smiles worth saving","Kobe sharing a smiling selfie at a Seahawks event"],
+ [19,"The best kind of team","Kobe and friends wearing Seahawks dance uniforms and paper crowns"],
+ [20,"Serving up a smile","Kobe smiling and making a peace sign behind a counter"],
+ [21,"Her people. Her happy.","Kobe surrounded by friends clapping"],
+ [22,"A little woodland wonder","Kobe standing beside a wooden troll sculpture in the forest"],
+ [23,"A summer kind of smile","Kobe posing inside a large orange frame decorated with flowers"]
 ];
 const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
 const main=document.querySelector('#main'),entrance=document.querySelector('#entrance');
@@ -18,7 +30,7 @@ document.querySelector('#enter').addEventListener('click',()=>{main.inert=false;
 const gallery=document.querySelector('#gallery'),grid=document.querySelector('#memoryGrid');
 let current=0,opener=null,start=null;
 function showPhoto(index){current=(index+photos.length)%photos.length;const [id,caption,alt]=photos[current];document.querySelector('#galleryImage').src=`assets/${id}-Photo-${id}.jpg`;document.querySelector('#galleryImage').alt=alt;document.querySelector('#galleryCaption').textContent=caption;document.querySelector('#galleryCount').textContent=`${current+1} / ${photos.length}`;}
-photos.forEach(([id,caption,alt],i)=>{const button=document.createElement('button');button.className='memory-photo';button.type='button';button.setAttribute('aria-label',`Enlarge photo: ${alt}`);const img=document.createElement('img');img.src=`assets/${id}-Photo-${id}.jpg`;img.alt=alt;img.loading='lazy';if(id===1||id===9||id===11)img.style.objectFit='contain';const label=document.createElement('span');const title=document.createElement('b');title.textContent=caption;const number=document.createElement('span');number.className='index';number.textContent=String(i+1).padStart(2,'0');label.append(title,number);button.append(img,label);button.addEventListener('click',()=>{opener=button;showPhoto(i);gallery.showModal();document.body.style.overflow='hidden';});grid.append(button);});
+photos.forEach(([id,caption,alt],i)=>{const button=document.createElement('button');button.className='memory-photo';button.type='button';button.setAttribute('aria-label',`Enlarge photo: ${alt}`);const img=document.createElement('img');img.src=`assets/${id}-Photo-${id}.jpg`;img.alt=alt;img.loading='lazy';if(id===1||id===9||id===11||id>=12)img.style.objectFit='contain';const label=document.createElement('span');const title=document.createElement('b');title.textContent=caption;const number=document.createElement('span');number.className='index';number.textContent=String(i+1).padStart(2,'0');label.append(title,number);button.append(img,label);button.addEventListener('click',()=>{opener=button;showPhoto(i);gallery.showModal();document.body.style.overflow='hidden';});grid.append(button);});
 document.querySelector('#closeGallery').addEventListener('click',()=>gallery.close());
 document.querySelector('#previous').addEventListener('click',()=>showPhoto(current-1));document.querySelector('#next').addEventListener('click',()=>showPhoto(current+1));
 gallery.addEventListener('keydown',e=>{if(e.key==='ArrowRight'){e.preventDefault();showPhoto(current+1);}if(e.key==='ArrowLeft'){e.preventDefault();showPhoto(current-1);}});
